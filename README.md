@@ -1,4 +1,4 @@
-# qgledger: The Official Toolkit for a Slightly Mad Theory of Gravity
+# qglib: The Official Toolkit for a Slightly Mad Theory of Gravity
 ### Version 0.1.0
 
 A theory of quantum gravity is useless if you can't calculate anything with it. This is the calculator.
