@@ -1,0 +1,43 @@
+gqlib/
+├── __init__.py                          ✓ re-exports & version
+├── constants.py                         ✓ SI constants, Planck units, alpha_H, I_star, A_bit
+├── utils.py                             ✓ numerics (roots/derivatives), unit helpers
+├── geom.py                              ✓ invariants & radii (Schw), plus Kerr/RN helpers
+├── tortoise.py                          ✓ exterior r_*(r), Δr_*, ε_eff inversion, echo Δt
+├── barrier.py                           ✓ Regge–Wheeler barrier (Schwarzschild), WKB T/R
+├── echoes.py                            ✓ echo train synthesis, simple spectra, comb lines
+├── npr.py                               ✓ NPR constraints, write thermodynamics/diagnostics
+├── measurement.py                       ✓ lab-facing: κ, Unruh T, energy/area, time-to-write
+├── remnants.py                          ✓ Hawking T/P, suppressed evaporation to remnant
+├── cosmology.py                         ✓ FRW H(a), R_A, T_A, S(A), 𝓘_FRW and placement check
+├── codes.py                             ✓ 4-bit register packing + Hamming(7,4) ECC
+│
+├── (planned) cavity.py                  ✓ map true inside ledger → effective ε_eff(M) outside
+├── (planned) barrier_kerr.py            ✓ toy Kerr barrier/light-ring echo timing (E/M only)
+├── (planned) highD.py                   ✓ Schwarzschild–Tangherlini (D>4) invariants & 𝓘
+├── (planned) viz/                       ✓ optional matplotlib wrappers (kept separate)
+│
+├── tests/                               ✓ unit tests per module (pytest)
+│   ├── test_constants.py                ✓
+│   ├── test_geom.py                     ✓
+│   ├── test_tortoise.py                 ✓
+│   ├── test_barrier.py                  ✓
+│   ├── test_echoes.py                   ✓
+│   ├── test_npr.py                      ✓
+│   ├── test_measurement.py              ✓
+│   ├── test_remnants.py                 ✓
+│   ├── test_cosmology.py                ✓
+│   └── test_codes.py                    ✓
+│
+├── examples/                            ✓ short, runnable demos (no big deps)
+│   ├── 01_invariant_and_ledger.ipynb    ✓ place r_L(M), compare to r_s & r_ph
+│   ├── 02_echo_timing_and_spectra.ipynb ✓ build echo trains, match comb n/Δt
+│   ├── 03_measurement_thresholds.ipynb  ✓ κ, ΔQ/A, lab intensities, t_write
+│   ├── 04_evaporation_to_remnant.ipynb  ✓ integrate M(t) → M_rem
+│   └── 05_FRW_invariant.ipynb           ✓ 𝓘_FRW(a) and approach to 𝓘_*
+│
+├── pyproject.toml                       ▢ packaging, deps (numpy only), python>=3.9
+├── README.md                            ▢ overview, install, quickstart, scope
+├── LICENSE                              ▢ your chosen license (e.g., MIT/Apache-2.0)
+├── CITATION.cff                         ▢ citation metadata (title, authors, ORCID)
+└── .github/workflows/ci.yml             ▢ lint + tests matrix
